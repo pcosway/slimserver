@@ -2467,6 +2467,8 @@ sub jiveAlarmCommand {
 	my $stop        = $request->getParam('stop')   ? 1 : undef;
 	my $fadein      = $request->getParam('fadein');
 
+ 	my $message      = $request->getParam('message');
+
 	my $alarm       = Slim::Utils::Alarm->getCurrentAlarm($client);
 
 	if ( defined($alarm) ) {
